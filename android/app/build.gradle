@@ -59,30 +59,30 @@ android {
         versionName flutterVersionName
     }
 
-    flavorDimensions "flavor"
+    // flavorDimensions "flavor"
 
-    productFlavors {
-        github {
-            dimension "flavor"
-            applicationIdSuffix ""
-        }
-        fdroid {
-            dimension "flavor"
-            applicationIdSuffix ".fdroid"
-        }
-    }
+    // productFlavors {
+    //     github {
+    //         dimension "flavor"
+    //         applicationIdSuffix ""
+    //     }
+    //     fdroid {
+    //         dimension "flavor"
+    //         applicationIdSuffix ".fdroid"
+    //     }
+    // }
 
-    signingConfigs {
-        release {
-            //From decoded key
-            storeFile = file('key.jks')
+    // signingConfigs {
+    //     release {
+    //         //From decoded key
+    //         storeFile = file('key.jks')
 
-            //From key.properties
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
-            storePassword keystoreProperties['storePassword']
-        }
-    }
+    //         //From key.properties
+    //         keyAlias keystoreProperties['keyAlias']
+    //         keyPassword keystoreProperties['keyPassword']
+    //         storePassword keystoreProperties['storePassword']
+    //     }
+    // }
 
     buildFeatures {
         buildConfig = true
@@ -96,10 +96,11 @@ android {
     }
 
     buildTypes {
-        release {
-            signingConfig signingConfigs.release
-            shrinkResources false
-        }
+
+        // release {
+        //     signingConfig signingConfigs.release
+        //     shrinkResources false
+        // }
         debug {
             applicationIdSuffix '.debug'
             versionNameSuffix ' DEBUG'
